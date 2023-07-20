@@ -6,7 +6,7 @@
   * Return: result of multiplucation between @m,@n
   */
 
-int mul(int a,int b)
+int mul(int a, int b)
 {
 	return (a * b);
 }
