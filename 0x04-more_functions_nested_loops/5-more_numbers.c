@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-  * Write - afunction that prints 10x numbers 0 to 14
+  * more_numbers - prints 10x numbers 0 to 14
   * Return: 10 times of numbers 0 to 14.
   */
 
