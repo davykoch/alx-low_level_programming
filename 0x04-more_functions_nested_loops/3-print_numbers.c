@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print - Numbers 0 to 9 followed by new line
+ * print_numbers -0 to 9 followed by new line
  *
  * Return: prints the numbers 0 to 9 on a single line,followed by a new line.
  */
