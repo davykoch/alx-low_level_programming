@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-  * Write - a function that draws a straight line in the terminal
+  * print_line - a function that draws a straight line in the terminal
   * @n: Number of lines to draw
   * Return: print \n if n is 0 or less
   */
