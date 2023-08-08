@@ -4,10 +4,10 @@
  * main - Program that prints all arguments it receives.
  * @argc: arguments count
  * @argv: Arrays of arguments
- * Return: Alway 0 Success
+ * Return: Always (0) Success
+*/
 
- */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	int i;
 
