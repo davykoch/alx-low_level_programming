@@ -2,10 +2,12 @@
 #include"dog.h"
 /**
   * free_dog -  function that frees dogs
-  * @d: pointer to dogs
+  * @d: pointer to dog
+  * Return: 0s
   */
 void free_dog(dog_t *d)
 {
+	if (d != NULL)
 	{
 		free(d->name);
 		free(d->owner);
