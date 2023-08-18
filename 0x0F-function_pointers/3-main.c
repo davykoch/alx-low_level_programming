@@ -14,22 +14,12 @@ int main(int argc, char *argv[])
 	{
 		printf("Error\n");
 		exit(98);
-		if (argv[2][1] != '\0')
-		{
-			printf("Error\n");
-			exit(99);
-		}
 	}
 	c = argv[2][0];
 	if (c != '+' && c != '-' && c != '*' && c != '/' && c != '%')
 	{
 		printf("Error\n");
 		exit(99);
-	}
-	if ((c == '/' && (atoi(argv[3])) == 0) || (c == '%' && atoi(argv[3])))
-	{
-		printf("Error\n");
-		exit(100);
 	}
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
