@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	c = argv[2][0];
 	if (c != '+' && c != '-' && c != '*' && c != '/' && c != '%')
 	{
-		printf("Error/n");
+		printf("Error\n");
 		exit(99);
 	}
 	a = atoi(argv[1]);
