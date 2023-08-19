@@ -18,18 +18,18 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		char *str = va_arg(ap, char *);
 
 		if (str != NULL)
-	{
-		printf("%s", str);
-	}
-	else
-	{
-		printf("(nill)");
-		continue;
-	}
-	if (i != (n - 1) && separator != NULL)
-	{
-		printf("%s", separator);
-	}
+		{
+			printf("%s", str);
+		}
+		else
+		{
+			printf("(nill)");
+			continue;
+		}
+		if (i != (n - 1) && separator != NULL)
+		{
+			printf("%s", separator);
+		}
 	}
 	va_end(ap);
 	printf("\n");
