@@ -9,40 +9,28 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
+	ssize_t o, r, w;
+	char *buffer;
+
 	if (filename == NULL)
 		return (0);
-	int o = open(filename, O_RDONLY);
 
-	if (o == -1)
-	{
-		perror("Error opening file");
-		return (0);
-	}
-	char *buffer = malloc(letters);
-
+	buffer = malloc(sizeof(char) * letters);
 	if (buffer == NULL)
-	{
-		perror("Error allocating memory");
-		close(o);
 		return (0);
-	}
-	ssize_t r = read(o, buffer, letters);
 
-	if (r == -1)
+	o = open(filename, O_RDONLY);
+	r = read(o, buffer, letters);
+	w = write(STDOUT_FILENO, buffer, r);
+
+	if (o == -1 || r == -1 || w == -1 || w != r)
 	{
-		perror("Error reading file");
 		free(buffer);
-		close(o);
 		return (0);
 	}
-	ssize_t w = write(STDOUT_FILENO, buffer, r);
 
 	free(buffer);
 	close(o);
-	if (w == -1 || w != r)
-	{
-		perror("Error writing to stdout");
-		return (0);
-	}
-	return (r);
+
+	return (w);
 }
