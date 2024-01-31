@@ -1,4 +1,4 @@
-#!/usr/bin/pythhon3
+#!/usr/bin/python3
 """this module contains function that returns perimeter of an island"""
 
 
