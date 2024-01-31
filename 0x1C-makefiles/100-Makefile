@@ -10,11 +10,10 @@ $(NAME): $(SRC) m.h
 	$(CC) $(CFLAGS) -o $(NAME) $(SRC)
 
 clean:
-	@find . -type f \( -name '*~' -o -name '#*#' \) -delete
-	@find . -type f -name '$(NAME)' -delete
+	$(RM) *~ *# $(NAME)
 
 oclean:
-	@find . -type f -name '*.o' -delete
+	$(RM) $(OBJ)
 
 fclean: clean oclean
 
